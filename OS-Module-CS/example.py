@@ -51,10 +51,30 @@ print(os.environ.get('HOME'))
 # iremos a seguir criar um arquivo chamado "test.txt" para o path na HOME do usuario.
 'test.txt'
 
-# não fazer dessa forma para criar o arquivo no path HOME
+# NÃOOOOOOOO fazer dessa forma para criar o arquivo no path HOME
 file_path = os.environ.get('HOME') + 'test.txt'
 print(file_path)
 
-#fazer dessa forma para criar o arquivo no path HOME
+# fazer dessa forma para criar o arquivo no path HOME
 file_path = os.path.join(os.environ.get('HOME'), 'test.txt')
 print(file_path)
+
+# Exibe o nome "Base" do arquivo do path que foi passado.
+print(os.path.basename('tmp/test.txt'))
+
+# Exibe apenas o diretorio daquele path passado.
+print(os.path.dirname('tmp/test.txt'))
+
+# Exibe as informações do diretorio e o nome do arquivo, separados como uma tupla de 2 valores.
+print(os.path.split('tmp/test.txt'))
+
+# Exibe a informação se existe o arquivo no caminho passado como parametro. Retorna um valor Booleano
+print(os.path.exists('tmp/test.txt'))
+
+# Exibe se o caminho passado é ou não um diretorio. Retorna um valor Booleano.
+print(os.path.isdir('/tmp'))
+
+# Exibe se o caminho passado é ou não um arquivo. Retorna um valor Booleano.
+print(os.path.isfile('/tmp/demo'))
+
+print(os.path.splitext('/tmp/demo.text'))
