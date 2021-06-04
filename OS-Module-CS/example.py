@@ -77,4 +77,5 @@ print(os.path.isdir('/tmp'))
 # Exibe se o caminho passado é ou não um arquivo. Retorna um valor Booleano.
 print(os.path.isfile('/tmp/demo'))
 
+# Exibe a partir do caminho uma tupla com 2 valores: o diretorio do arquivo + nome do arquivo e a extensão do arquivo.
 print(os.path.splitext('/tmp/demo.text'))
